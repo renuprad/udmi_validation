@@ -23,9 +23,9 @@
             })
             .then(data => {
                 // Selectively display the content
-                document.getElementById('correct_devices').textContent = validation_report.udmi_version;
-                document.getElementById('missing_devices').textContent = data.timestamp;
-                document.getElementById("error_devices').textContent = validation_report.version;
+                document.getElementById('correct_devices').textContent = validation_report.user.name;
+                document.getElementById('missing_devices').textContent = data.user.location;
+                document.getElementById('error_devices').textContent = validation_report.user.location;
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
