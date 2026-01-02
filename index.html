@@ -12,7 +12,7 @@
 
     <script>
         // Use the relative path to your JSON file within the repo/GitHub Page
-        const jsonUrl = './udmi_validation/validation_report.json'; 
+        const jsonUrl = './udmi_validation/blob/main/validation_report.json'; 
 
         fetch(jsonUrl)
             .then(response => {
@@ -25,7 +25,7 @@
                 // Selectively display the content
                 document.getElementById('correct_devices').textContent = validation_report.udmi_version;
                 document.getElementById('missing_devices').textContent = data.timestamp;
-                document.getElementById('error_devices').textContent = validation_report.version;
+                document.getElementById("error_devices').textContent = validation_report.version;
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
