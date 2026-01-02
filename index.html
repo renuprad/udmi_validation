@@ -24,8 +24,8 @@
             .then(data => {
                 // Selectively display the content
                 console.log(data)
-                document.getElementById('correct_devices').textContent = data.timestamp;
-                document.getElementById('missing_devices').textContent = data.cloud_version.hostname;
+                document.getElementById('correct_devices').textContent = data.summary.correct_devices;
+                document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
             })
             .catch(error => {
