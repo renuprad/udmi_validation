@@ -24,9 +24,9 @@
             .then(data => {
                 // Selectively display the content
                 console.log(data)
-                document.getElementById('correct_devices').textContent = data.user.name;
-                document.getElementById('missing_devices').textContent = data.user.location;
-                document.getElementById('error_devices').textContent = data.user.age;
+                document.getElementById('correct_devices').textContent = data.timestamp;
+                document.getElementById('missing_devices').textContent = data.cloud_version.hostname;
+                document.getElementById('error_devices').textContent = data.summary.error_devices;
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
