@@ -23,9 +23,10 @@
             })
             .then(data => {
                 // Selectively display the content
-                document.getElementById('correct_devices').textContent = validation_report.user.name;
+                console.log(data)
+                document.getElementById('correct_devices').textContent = data.user.name;
                 document.getElementById('missing_devices').textContent = data.user.location;
-                document.getElementById('error_devices').textContent = validation_report.user.age;
+                document.getElementById('error_devices').textContent = data.user.age;
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
