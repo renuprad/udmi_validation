@@ -1,1 +1,35 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON Data Display</title>
+</head>
+<body>
+    <h1>Selected JSON Content</h1>
+    <p>Name: <span id="name"></span></p>
+    <p>Location: <span id="location"></span></p>
+
+    <script>
+        // Use the relative path to your JSON file within the repo/GitHub Page
+        const jsonUrl = './udmi_validation/validation_report.json'; 
+
+        fetch(jsonUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json(); // Parse the response as JSON
+            })
+            .then(data => {
+                // Selectively display the content
+                document.getElementById('correct_devices').textContent = validation_report.summary.correct_devices;
+                document.getElementById('missing_devices').textContent = validation_report.summary.missing_devices;
+                document.getElementById('error_devices').textContent = validation_report.summary.error_devices;
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+    </script>
+</body>
+</html>
+
