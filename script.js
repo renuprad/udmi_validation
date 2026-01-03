@@ -1,6 +1,6 @@
 if (myGlobalValue){
          console.log("script 2: accessing global array");
-         myGlobalValue.forEach(function(item) {
+         myGlobalValue.forEach(item {
          console.log(item);
        });
        } else {
