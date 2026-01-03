@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>JSON Data Display</title>
+    <script>
+        var myGlobalValue = "a global Variable";
+        const jsonUrl = '/udmi_validation/validation_report.json'; 
+        var myValue = "a variable";    
+    </script>
+
 </head>
+
 <body>
     <h1>Selected JSON Content</h1>
     <p>Correct Devices: <span id="correct_devices"></span></p>    
@@ -15,9 +22,7 @@
 
     <script>
         // Use the relative path to your JSON file within the repo/GitHub Page
-        var myGlobalValue = "a global Variable";
-        const jsonUrl = '/udmi_validation/validation_report.json'; 
-        var myValue = "a variable";
+
 
         fetch(jsonUrl)
             .then(response => {
@@ -50,6 +55,8 @@
     
     
     <script src="script.js"></script>
+    
+    console.log('The Global Value 3 is now:', myGlobalValue);
     
 </body>
 </html>
