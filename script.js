@@ -8,8 +8,10 @@
 //       }
 
 const container = document.getElementById('data-container');
+console.log(container);
 
 const dataArray = container.getAttribute('data-array-values');
+console.log(dataArray);
 
 if (dataArray){
 	const myArray = JSON.parse(dataArray);
