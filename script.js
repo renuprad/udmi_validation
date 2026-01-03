@@ -1,11 +1,11 @@
-if (myGlobalValue){
-         console.log("script 2: accessing global array");
-         myGlobalValue.forEach(item {
-         console.log(item);
-       });
-       } else {
-       console.log("Script 2: Global array not found.");
-       }
+// if (myGlobalValue){
+//         console.log("script 2: accessing global array");
+//         myGlobalValue.forEach(item{ 
+//         console.log(item);
+//       });
+//       } else {
+//       console.log("Script 2: Global array not found.");
+//       }
 
 createTable(myGlobalValue);
 
