@@ -30,6 +30,8 @@
                 // Selectively display the content
                 console.log('The validation file is read:', data);
                 myValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
+                myGlobalValue = myValue;
+                console.log('The Global Value 1 is now:', myGlobalValue);
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
                 
@@ -39,9 +41,8 @@
                 console.error('There has been a problem with your fetch operation:', error);
             })
             
-            myGlobalValue = myValue;
-            
-            console.log('The Global Value is now:', myGlobalValue);
+           
+            console.log('The Global Value 2 is now:', myGlobalValue);
           
             
     </script>
