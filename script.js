@@ -9,12 +9,15 @@
 
 createTable(myGlobalValue);
 
+const leng = myGlobalValue.length;
+console.log(leng);
+
 function createTable(dataArray) {
 	const table = document.getElementById('dataTable');
  	
  	const headerRow = table.insertRow();
  	const headerCell = headerRow.insertCell();
- 	headerCell.textContent = "Item Name"; // Give a meaningful header name
+ 	headerCell.textContent = "Correct Devices"; // Give a meaningful header name
  	headerCell.style.fontWeight = "bold";
 	
 	dataArray.forEach(item => {
