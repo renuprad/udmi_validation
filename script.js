@@ -7,11 +7,13 @@
 //       console.log("Script 2: Global array not found.");
 //       }
 
+console.log('There correct devices list is 2nd time:', myGlobalValue)
+
 const container = document.getElementById('data-container');
-console.log(container);
+console.log('The first log', container);
 
 const dataArray = container.getAttribute('data-array-values');
-console.log(dataArray);
+console.log('The second log', dataArray);
 
 if (dataArray){
 	const myArray = JSON.parse(dataArray);
@@ -21,12 +23,12 @@ if (dataArray){
 }
 	
 
-createTable(myGlobalValue);
+createTable(dataArray);
 
-const leng = myGlobalValue.length;
+const leng = dataArray.length;
 console.log(leng);
 
-function createTable(dataArray) {
+function createTable(dataArray1) {
 	const table = document.getElementById('dataTable');
  	
  	const headerRow = table.insertRow();
