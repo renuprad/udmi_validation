@@ -1,3 +1,14 @@
+if (myGlobalValue){
+         console.log("script 2: accessing global array");
+         myGlobalValue.forEach(function(item) {
+         console.log(item);
+       });
+       } else {
+       console.log("Script 2: Global array not found.");
+       }
+
+createTable(myGlobalValue);
+
 function createTable(dataArray) {
 	const table = document.getElementById('dataTable');
  	
@@ -13,4 +24,4 @@ function createTable(dataArray) {
 	});
 }
 
-createTable(myGlobalValue);
+
