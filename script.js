@@ -13,4 +13,4 @@ function createTable(dataArray) {
 	});
 }
 
-createTable(correct_devices);
+createTable(myGlobalValue);
