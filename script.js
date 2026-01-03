@@ -1,4 +1,4 @@
-dataArray = myGlobalValue;
+dataArray = myValue;
 console.log('There correct devices list is 2nd time:', dataArray);
 createTable(dataArray);
 
