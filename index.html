@@ -35,10 +35,13 @@
                 myValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
                 myGlobalValue = myValue;
                 console.log('The Global Value 1 is now:', myGlobalValue);
+                console.log(myValue.length);
+                console.log(myGlobalValue.length);
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
                 
                  console.log('There correct devices list is:', myValue);
+                 console.log(myValue.length);
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
