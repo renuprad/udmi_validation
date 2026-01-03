@@ -16,9 +16,10 @@ function createTable(array) {
         const row = document.createElement('tr');
 
         // Loop through the array and create table cells (td)
-        array.forEach(item => {
+        Object.keys(array).forEach(key => {
+        console.log(array[key]);
         const cell = document.createElement('td');
-        cell.textContent = item; // Set the cell text to the array item
+        cell.textContent = array[key]; // Set the cell text to the array item
         row.appendChild(cell); // Add the cell to the row
     });
         
