@@ -1,5 +1,5 @@
 dataArray = myGlobalValue;
-console.log('There correct devices list is 2nd time:', myGlobalValue);
+console.log('There correct devices list is 2nd time:', dataArray);
 createTable(dataArray);
 
 function createTable(array) {
@@ -16,7 +16,7 @@ function createTable(array) {
         const row = document.createElement('tr');
 
         // Loop through the array and create table cells (td)
-        Object.keys(array).forEach(key => {
+        Object.keys(array || {}).forEach(key => {
         console.log(array[key]);
         const cell = document.createElement('td');
         cell.textContent = array[key]; // Set the cell text to the array item
