@@ -9,6 +9,9 @@
     <p>Correct Devices: <span id="correct_devices"></span></p>    
     <p>Missing Devices: <span id="missing_devices"></span></p>
     <p>Error Devices: <span id="error_devices"></span></p>
+     <h1>1D Array Data</h1>
+     <!-- This is where the table will be inserted -->
+     <div id="table-container"></div>
 
     <script>
         // Use the relative path to your JSON file within the repo/GitHub Page
@@ -32,18 +35,18 @@
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
-            });
+            })
             
-            
-            <h1>1D Array Data</h1>
-    		<!-- This is where the table will be inserted -->
-    		<div id="table-container"></div>
-
-    		<!-- Link the JavaScript file -->
-    		src="script.js"
-            
+           
     </script>
     
+   		<!-- Link the JavaScript file -->
+    		<script src="script.js"></script>
+               
+    		
+    		
+
+
 
     
 </body>
