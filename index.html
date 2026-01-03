@@ -28,7 +28,7 @@
             .then(data => {
                 // Selectively display the content
                 console.log('The validation file is read:', data)
-                myGlobalValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
+                const myValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
                 
@@ -38,6 +38,7 @@
                 console.error('There has been a problem with your fetch operation:', error);
             })
             
+            myGlobalValue = myValue.value;
           
             
     </script>
