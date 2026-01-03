@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>JSON Data Display</title>
     <script>
-        var myGlobalValue = "a global Variable";
+        let myGlobalValue = [];
         const jsonUrl = '/udmi_validation/validation_report.json'; 
-        var myValue = "a variable";    
+        let myValue = [];    
     </script>
 
 </head>
@@ -50,14 +50,12 @@
             
     </script>
     
+    <script src="script.js"></script>
+    
      <h1>1D Array Data</h1>
      <!-- This is where the table will be inserted -->
      <div id="table-container"></div>
     <div id="data-container" data-array-values = 'correct_devices'></div>
-    
-    
-    <script src="script.js"></script>
-    
     
 </body>
 </html>
