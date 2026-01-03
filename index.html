@@ -17,6 +17,7 @@
         // Use the relative path to your JSON file within the repo/GitHub Page
         var myGlobalValue = "a global Variable";
         const jsonUrl = '/udmi_validation/validation_report.json'; 
+        const myValue;
 
         fetch(jsonUrl)
             .then(response => {
@@ -28,11 +29,11 @@
             .then(data => {
                 // Selectively display the content
                 console.log('The validation file is read:', data)
-                const myValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
+                myValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
                 
-                 console.log('There correct devices list is:', myGlobalValue)
+                 console.log('There correct devices list is:', myValue)
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
