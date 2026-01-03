@@ -27,25 +27,16 @@
                 document.getElementById('correct_devices').textContent = data.summary.correct_devices;
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
+                
+                var myGlobalValue = "correct_devices";
+                console.log(myGlobalValue)
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
             });
     </script>
     
-    <title>Array to Table</title>
-    <style>
-        table { border-collapse: collapse; width: 50%; }
-        th, td { border: 1px solid black; padding: 8px; text-align: left; }
-    </style>
-   </head>
-   <body>
-    <h2>1D Array Data Table</h2>
-    <table id="dataTable">
-        <!-- Table data will be inserted here by JavaScript -->
-    </table>
 
-    <script src="script.js"></script>
     
 </body>
 </html>
