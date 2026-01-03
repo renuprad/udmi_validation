@@ -7,6 +7,18 @@
 //       console.log("Script 2: Global array not found.");
 //       }
 
+const container = document.getElementById('data-container');
+
+const dataArray = container.getAttribute('data-array-values');
+
+if (dataArray){
+	const myArray = JSON.parse(dataArray);
+	console.log("External Script: Accessing array via data attribute:", myArray);
+} else {
+	console.log("External Script: Data attribute not found.");
+}
+	
+
 createTable(myGlobalValue);
 
 const leng = myGlobalValue.length;
