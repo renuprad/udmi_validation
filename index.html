@@ -28,18 +28,20 @@
             })
             .then(data => {
                 // Selectively display the content
-                console.log('The validation file is read:', data)
+                console.log('The validation file is read:', data);
                 myValue = document.getElementById('correct_devices').textContent = data.summary.correct_devices;
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
                 
-                 console.log('There correct devices list is:', myValue)
+                 console.log('There correct devices list is:', myValue);
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
             })
             
-            myGlobalValue = myValue.value;
+            myGlobalValue = myValue;
+            
+            console.log('The Global Value is now:', myGlobalValue);
           
             
     </script>
