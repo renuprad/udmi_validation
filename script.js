@@ -1,46 +1,31 @@
-// if (myGlobalValue){
-//         console.log("script 2: accessing global array");
-//         myGlobalValue.forEach(item{ 
-//         console.log(item);
-//       });
-//       } else {
-//       console.log("Script 2: Global array not found.");
-//       }
+dataArray = myGlobalValue;
+console.log('There correct devices list is 2nd time:', myGlobalValue);
+createTable(dataArray);
 
-console.log('There correct devices list is 2nd time:', myGlobalValue)
-
-//const container = document.getElementById('data-container');
-//console.log('The first log', container);
-
-//const dataArray = container.getAttribute('data-array-values');
-//console.log('The second log', dataArray);
-
-//if (dataArray){
-//	const myArray = JSON.parse(dataArray);
-//	console.log("External Script: Accessing array via data attribute:", myArray);
-//} else {
-//	console.log("External Script: Data attribute not found.");
-//}
+function createTable(array) {
 	
+	// Get the container element from the HTML
+	const container = document.getElementById('table-container');
+	
+	
+	// Create table and tbody elements
+	const table = document.createElement('table');
+        const tbody = document.createElement('tbody');
+        
+        // Create a new table row (tr)
+        const row = document.createElement('tr');
 
-//createTable(dataArray);
-
-//const leng = dataArray.length;
-//console.log(leng);
-
-//function createTable(dataArray1) {
-//	const table = document.getElementById('dataTable');
-// 	
-// 	const headerRow = table.insertRow();
-// 	const headerCell = headerRow.insertCell();
-// 	headerCell.textContent = "Correct Devices"; // Give a meaningful header name
-// 	headerCell.style.fontWeight = "bold";
-//
-//	dataArray.forEach(item => {
-//		const row = table.insertRow(); // Insert a new row at the end of the table
-//		const cell = row.insertCell(); // Insert a cell into the new row
-//		cell.textContent = item; // Set the cell's text content to the array item
-//	});
-// }
-
-
+        // Loop through the array and create table cells (td)
+        array.forEach(item => {
+        const cell = document.createElement('td');
+        cell.textContent = item; // Set the cell text to the array item
+        row.appendChild(cell); // Add the cell to the row
+    });
+        
+         // Add the row to the tbody
+         tbody.appendChild(row);
+         // Add the tbody to the table
+        table.appendChild(tbody);
+         // Add the final table to the container in the HTML
+       container.appendChild(table);
+}
