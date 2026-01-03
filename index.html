@@ -32,7 +32,7 @@
                 document.getElementById('missing_devices').textContent = data.summary.missing_devices;
                 document.getElementById('error_devices').textContent = data.summary.error_devices;
                 
-                 console.log(myGlobalValue)
+                 console.log('There correct devices list is:', myGlobalValue)
             })
             .catch(error => {
                 console.error('There has been a problem with your fetch operation:', error);
